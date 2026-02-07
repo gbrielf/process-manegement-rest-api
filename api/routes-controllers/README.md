@@ -1,0 +1,1 @@
+Controllers (ou Routers): Gerenciam os endpoints HTTP (@app.get, @app.post), validam a entrada (com Pydantic) e chamam a camada de serviço.
