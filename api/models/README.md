@@ -1,1 +1,0 @@
-Database Models (SQLAlchemy/SQLModel): Estrutura da tabela. 

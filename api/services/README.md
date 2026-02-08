@@ -1,1 +1,0 @@
-Services: Contêm a "regra de negócio". É aqui que você processa dados, realiza validações complexas e orquestra a lógica antes de interagir com o banco de dados.

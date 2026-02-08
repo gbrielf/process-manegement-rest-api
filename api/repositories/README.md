@@ -1,1 +1,0 @@
-Repositories: Lidam com a persistência de dados. Fazem a interface com o banco de dados (usando SQLAlchemy, SQLModel, etc.), isolando as consultas SQL ou ORM da lógica de negócio.
