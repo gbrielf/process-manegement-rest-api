@@ -31,8 +31,8 @@ class Processo (models.Model):
 class Audiencia(models.Model):
     AUDIENCIA_TIPO = [
         ('CONCILIAÇÃO', 'conciliação'),
-        ('INSTRUÇÃO','instrução'),
-        ('JULGAMENTO','julgamento'),
+        ('INSTRUÇÃO', 'instrução'),
+        ('JULGAMENTO', 'julgamento'),
     ]
 
     data_criacao = models.DateTimeField()
@@ -42,6 +42,6 @@ class Audiencia(models.Model):
 
     def __str__(self):
         try:
-            return f"data: {self.data_criacao}\ntipo: {self.tipo}\nlocal: {self.local}\nprocessos envolvidos: {self.processos}"
+            return f"data: {self.data_criacao}\ntipo: {self.tipo}\nlocal: {self.local}\nprocessos envolvidos: {self.processo}"
         except Exception:
             return str(self.local - self.data_criacao - self.processo)
