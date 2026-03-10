@@ -14,7 +14,7 @@ class Processo (models.Model):
         message=('Formato inválido. Use esse padrão: 0000000-00.0000.0.00.0000')
     )
 
-    numero_processo = models.IntegerField(unique=True, max_length=25, validators=[validador_de_processo], help_text='Padrão desejado: 0000000-00.0000.0.00.0000')
+    numero_processo = models.CharField(unique=True, max_length=25, validators=[validador_de_processo], help_text='Padrão desejado: 0000000-00.0000.0.00.0000')
     data_criacao = models.DateTimeField()
     vara = models.CharField(max_length=150)
     comarca = models.CharField(max_length=200)
@@ -37,7 +37,7 @@ class Audiencia(models.Model):
 
     data_criacao = models.DateTimeField()
     tipo = models.CharField(max_length=11, choices=AUDIENCIA_TIPO)
-    local = models.CharField(max_length=200),
+    local = models.CharField(max_length=200)
     processo = models.ForeignKey(Processo, on_delete=models.CASCADE, related_name="processo")
 
     def __str__(self):

@@ -30,5 +30,5 @@ class ProcessoService:
         if comarca:
             return resultado.filter(comarca=comarca)
         if status and comarca:
-            return resultado.filter(comarca=comarca,status=status)
+            return resultado.filter(comarca=comarca, status=status)
         return Processo.objects.none()
